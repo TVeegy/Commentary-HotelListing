@@ -3,6 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+      // [CL:1] IIS Setting for HTTP string/endpoint with sslport for HTTPS endpoint.
       "applicationUrl": "http://localhost:60542",
       "sslPort": 44379
     }
