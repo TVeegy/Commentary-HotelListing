@@ -43,6 +43,7 @@ namespace HotelListing
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
 
+            // [CL:9] Add CORS which facilitates foreign requests to our API
             services.AddCors(o =>
             {
                 o.AddPolicy("AllowAll", builder =>
@@ -74,11 +75,13 @@ namespace HotelListing
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // [CL:7] Limit functionality to env-value based environments
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            // [CL:8] We took Swagger out of only-development, so it may serve users too
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -90,6 +93,7 @@ namespace HotelListing
 
             app.UseHttpsRedirection();
 
+            // [CL:10] lets our app know to use the CORS policy
             app.UseCors("AllowAll");
 
             app.UseResponseCaching();
