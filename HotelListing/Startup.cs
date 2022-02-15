@@ -28,6 +28,7 @@ namespace HotelListing
         public void ConfigureServices(IServiceCollection services)
         {
 
+            // [CL:13] letting the app know to use our dbcontext to bridge the app to the DB
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"))
             );
@@ -90,7 +91,7 @@ namespace HotelListing
             });
 
             app.ConfigureExceptionHandler();
-
+             
             app.UseHttpsRedirection();
 
             // [CL:10] lets our app know to use the CORS policy

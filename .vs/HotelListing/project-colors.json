@@ -10,7 +10,12 @@
       "ProjectGuid": "abb6a6e5-736b-45c1-ac5e-e264f894d3d2",
       "DisplayName": "HotelListing.Core",
       "ColorIndex": 1
+    },
+    "8e555a64-1e10-47d4-835f-7bbd5077a4d8": {
+      "ProjectGuid": "8e555a64-1e10-47d4-835f-7bbd5077a4d8",
+      "DisplayName": "HotelListing.Data",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

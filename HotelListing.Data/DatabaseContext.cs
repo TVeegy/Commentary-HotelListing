@@ -14,7 +14,8 @@ namespace HotelListing.Data
         {}
 
 
-       
+
+        // [CL:10] AFA C# is concerned, the datatype is <Country> but AFA the Database is concerned, the table's name is countries.
         public DbSet<Country> Countries { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
 
