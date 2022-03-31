@@ -1,10 +1,12 @@
-﻿using System;
+﻿ using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HotelListing.Data.Migrations
 {
     public partial class FreshMigration : Migration
     {
+        // [CL:17] Firstly, create using Add-Migration and then enforce using Update-Database.
+        // [CL:18] We use migrations to encapsulate DB-alterations, just like we use commits for code.
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
