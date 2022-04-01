@@ -25,6 +25,7 @@ namespace HotelListing.Core.Repository
 
         public async Task Delete(int id)
         {
+            // [CL:19] In EF every DB operation has an async polar operation
             var entity = await _db.FindAsync(id);
             _db.Remove(entity);
         }
